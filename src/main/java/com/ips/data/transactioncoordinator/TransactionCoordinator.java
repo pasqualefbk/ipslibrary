@@ -186,7 +186,7 @@ public class TransactionCoordinator {
 
     }
 
-    private PreparedAtomContainer allocateDestinationTable(Connection ConnectionTo, String SchemaTo, String TableTo, String PrimaryKeysTo) throws SQLException, Exception {
+    protected PreparedAtomContainer allocateDestinationTable(Connection ConnectionTo, String SchemaTo, String TableTo, String PrimaryKeysTo) throws SQLException, Exception {
         PreparedAtomContainer DestinationTable = null;
         try {
             DestinationTable = new PreparedAtomContainer();
@@ -222,7 +222,7 @@ public class TransactionCoordinator {
 
     }
 
-    private PreparedAtomContainer allocateSourceTable(Connection ConnectionFrom, String SchemaFrom, String TableFrom, String PrimaryKeysFrom) throws SQLException, Exception {
+    protected PreparedAtomContainer allocateSourceTable(Connection ConnectionFrom, String SchemaFrom, String TableFrom, String PrimaryKeysFrom) throws SQLException, Exception {
         PreparedAtomContainer SourceTable = null;
         try {
             // allocate a new istance of PreparedAtomContanier
